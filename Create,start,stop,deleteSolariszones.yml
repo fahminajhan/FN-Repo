@@ -4,16 +4,16 @@
     state: present
     path: /zones/zone1
     sparse: True
-    root_password: Be9oX7OSwWoU.
-    config: 'set autoboot=true; add net; set physical=bge0; set address=10.1.1.1; end'
+    root_password: <insert password>
+    config: 'set autoboot=true; add net; set physical=bge0; set address=<insert IP Address>; end'
 
 - name: Create and install a zone and boot it
   community.general.solaris_zone:
     name: zone1
     state: running
     path: /zones/zone1
-    root_password: Be9oX7OSwWoU.
-    config: 'set autoboot=true; add net; set physical=bge0; set address=10.1.1.1; end'
+    root_password: <insert password>
+    config: 'set autoboot=true; add net; set physical=bge0; set address=<insert IP Address>; end'
 
 - name: Boot an already installed zone
   community.general.solaris_zone:
@@ -40,8 +40,8 @@
     name: zone1
     state: configured
     path: /zones/zone1
-    root_password: Be9oX7OSwWoU.
-    config: 'set autoboot=true; add net; set physical=bge0; set address=10.1.1.1; end'
+    root_password: <insert password>
+    config: 'set autoboot=true; add net; set physical=bge0; set address=<insert IP Address>; end'
 
 - name: Attach zone1
   community.general.solaris_zone:
